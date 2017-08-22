@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/game/game",
+    "pages/schoolMate/schoolMate",
+    "pages/same/same",
+    "pages/attention/attention",
+    "pages/zan/zan"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "音乐圈",
+    "navigationBarTextStyle":"#fff"
+  }
+}

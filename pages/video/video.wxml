@@ -1,0 +1,6 @@
+<view class="con">
+    <video src="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/{{catalog}}/{{filename}}.{{extension}}" controls="true" id="myVideo" autoplay="true"></video>
+   <!--<view>
+     <image src="../../img/pause.png" class="pause" bindtap="play" wx:if="{{flag}}"></image>
+   </view>-->
+</view>

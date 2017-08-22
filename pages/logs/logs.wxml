@@ -1,0 +1,71 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="title">
+        <image src="https://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/{{flag}}" class="pic"></image>
+        <view class="title_con">
+            <view>{{name}}</view>
+            <view>{{time}}</view>
+        </view>
+        <text class="attention" bindtap="change">{{status1?'已关注':'+关注'}}</text>
+        <view class="style">{{style}}</view>
+        <view class="video">
+            <image src="https://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/{{flag}}" class="video_pic"></image>
+            <navigator url="../video/video?id={{id}}&token={{token}}">
+                <image src="../../img/pause.png" class="pause"></image>
+            </navigator>
+        </view>
+        <view class="bot">
+            <view>
+                <image src="{{status?url_sel:url}}" bindtap="selected"></image>
+                <text>{{status?num + 1:num}}</text>
+            </view>
+            <view>
+                <image src="../../img/pinglun1.png"></image>
+                <text>{{comNum}}</text>
+            </view>   
+            <view>
+                <image src="../../img/share.png"></image>
+                <text>{{num}}</text>
+            </view>
+            <view>
+                <image src="../../img/dian.png"></image>
+                <text>{{num}}</text>
+            </view>
+        </view>
+  </view>
+  <view class="zanList">
+        <text style="margin-right:20rpx;vertical-align:super;">{{num}}  赞</text>
+        <block wx:for="{{imgList}}" wx:key="item">
+            <image src="{{item}}" class="pic2"></image>
+        </block>
+        <navigator url="../zan/zan">
+            <view class="border" align="center">
+                <image src="../../img/dian.png"></image>
+            </view>
+        </navigator>
+  </view>
+  <view>
+    <view class="com_title">
+        全部评论  ({{comNum}})
+        <view class="red_border"></view>
+    </view>
+    <view class="com_list">
+        <block wx:for="{{comList}}" wx:key="item">
+            <view class="com_list_title">
+                <image src="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/{{item.src}}"></image>
+                <text>{{item.name}}</text>
+                <text class="time">{{item.time}}</text>
+            </view>
+            <view class="com_list_con">
+                <text>{{item.content}}</text>
+            </view>
+        </block>
+    </view>
+  </view>
+  
+</view>
+<view class="bottom">
+    <input type="text" bindinput="msgInput"/>
+    <text class="send" bindtap="send">发送</text>
+</view>
+

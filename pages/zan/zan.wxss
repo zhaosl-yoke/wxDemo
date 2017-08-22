@@ -1,0 +1,20 @@
+/* pages/zan/zan.wxss */
+.con{
+    padding: 0 10rpx;
+}
+.con image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+.li{
+    padding: 20rpx 40rpx;
+    border-bottom: solid 1px #ddd;
+}
+.li image{
+    vertical-align: middle;
+}
+.li text{
+    vertical-align: middle;
+    margin-left: 10rpx;
+}

@@ -1,0 +1,62 @@
+<!--music.wxml-->
+<view class="container">
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" height="200"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="sort">
+  <navigator url="../game/game" hover-class="none">
+    <view class="icon">
+      <image src="../../img/game.png"></image>
+      <view>游戏</view>
+    </view>
+  </navigator>
+  <navigator url="../schoolMate/schoolMate" hover-class="none">
+    <view class="icon">
+      <image src="../../img/schoolMate.png"></image>
+      <view>校友</view>
+    </view>
+  </navigator>
+  <navigator url="../same/same" hover-class="none">
+    <view class="icon">
+      <image src="../../img/same.png"></image>
+      <view>同级</view>
+    </view>
+  </navigator>
+  <navigator url="../attention/attention" hover-class="none">
+    <view class="icon">
+      <image src="../../img/attention.png"></image>
+      <view>关注</view>
+    </view>
+  </navigator>
+  </view>
+  
+  <view class="flex-wrp">
+  <view class="list_title">
+    <text>精选动态</text>
+  </view>
+    <block wx:for="{{array}}" wx:key="item">
+      <view class="list">
+        <image src="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/{{item.thumb}}" class="flag"></image>
+        <text class="name">{{item.teacherName}}</text>
+        <navigator url="../logs/logs?id={{item.id}}&token={{token}}" hover-class="none">
+        <image src="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/{{item.thumb}}" class="content" bindtap="link"></image>
+          <image src="../../img/pause.png" class="pause"></image>
+        </navigator>
+       
+        <view class="bot">
+          <image src="{{item.status?url_sel:url}}" catchtap="selected" data-id="{{item.id}}" class="img"></image>
+          <text class="num">{{item.status?item.sourse + 1:item.sourse}}</text>
+             <!--<view class="{{item.status?'selected':'normal'}}" bindtap="selected" data-id="{{item.id}}">{{item.status?item.sourse + 1:item.sourse}}</view>-->
+             <image src="../../img/pinglun.png" class="img comment"></image>
+            <text class="num">{{item.sourse}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="contain">
+    <view class="title">
+        生命因你而动听
+    </view>
+    <view class="login_box">
+    <view class="top">
+        <!--<text class="name">手机号码</text>-->
+        <image src="../../img/Phone.png"></image>
+        <input type="text" placeholder="请输入手机号" bindinput="userNameInput"/>
+        <!--<text class="confirm" bindtap="confirm">获取验证码</text>-->
+    </view>
+    <view>
+        <!--<text class="name">验证码</text>-->
+        <image src="../../img/suo.png"></image>
+        <input type="number" placeholder="请输入密码" bindinput="userPasswordInput" password="true"/>
+    </view> 
+    </view>
+    <button class="Btn" bindtap="logIn">登录</button>
+</view>

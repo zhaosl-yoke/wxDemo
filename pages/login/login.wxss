@@ -1,0 +1,58 @@
+page{
+     background: url(http://ww3.sinaimg.cn/large/005BSAGTjw1fbs91rcc4qj30ku11279l.jpg) no-repeat;
+     height:100%;
+}
+.contain{
+    padding: 0 10rpx;
+}
+.title{
+    text-align: center;
+    padding: 100rpx 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50rpx;
+}
+.login_box{
+    background: #fff;
+    border-radius: 10rpx;
+    padding-top: 20rpx 0;
+}
+.login_box image{
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
+}
+.login_box input{
+    display:inline-block;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    box-sizing: border-box;
+    vertical-align: top;
+    /*width: 270rpx;*/
+}
+.login_box view{
+    padding: 30rpx 10rpx 30rpx 10rpx;
+}
+.login_box .top{
+    border-bottom: solid 1px #ccc;
+}
+.login_box text{
+    display: inline-block;
+}
+/*.login_box .name{
+    width: 160rpx;
+    margin-left: 20rpx;
+}*/
+/*.login_box .confirm{
+    font-size: 30rpx;
+    color: #fff;
+    margin-left: 60rpx;
+    background: #f44933;
+    padding: 10rpx;
+    border-radius: 10rpx;
+}*/
+.Btn{
+    margin-top: 100rpx;
+    background: #f44933;
+    color: #fff;
+}

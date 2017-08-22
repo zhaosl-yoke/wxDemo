@@ -1,0 +1,9 @@
+<!--pages/zan/zan.wxml-->
+<view class="con">
+    <block wx:for="{{array}}" wx:if="item">
+        <view class="li">
+            <image src="{{item.src}}"></image>
+            <text>{{item.name}}</text>
+        </view>
+    </block>
+</view>
